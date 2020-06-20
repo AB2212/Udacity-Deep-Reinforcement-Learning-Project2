@@ -57,7 +57,7 @@ The code is written in Python 3.6.3 and uses PyTorch 0.4.0. I have used detailed
 
 ### Results
 
-The environment got solved in 141 episodes by having average reward (32.16) in more than 30 over 100 consecutive episodes. The below plot shows the reward received after each episode
+The environment got solved in 141 episodes by having average reward (32.16) more than 30 over 100 consecutive episodes. The below plot shows the reward received after each episode
 
 ![reward_plot.png](reward_plot.png)
 
