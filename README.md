@@ -13,7 +13,7 @@ Train an agent to move its double-jointed arm to a goal location and keep it the
 
 ### Deep Reinforcement Learning Algorithm
 
-In this project, I have implemented [Deep Deterministic Policy Gradient Method](https://arxiv.org/abs/1509.02971)
+In this project, I have implemented [Deep Deterministic Policy Gradient Method](https://arxiv.org/abs/1509.02971) in a parallel environment setting
 
 ### Environment details
 
