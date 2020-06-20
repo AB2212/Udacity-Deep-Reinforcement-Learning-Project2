@@ -40,7 +40,7 @@ The code is written in Python 3.6.3 and uses PyTorch 0.4.0. I have used detailed
 - For Actors, there are 33(states), 128, 128 and 4(actions) neurons in each layer respectively.
 - For Critic, there are 37 (states + actions), 128, 128 and 1 (Q value) neurons in each layer respectively.
 - The first layer takes in the input which is states in case of Actor, and states & actions in case of Critic.The last layer outputs the action for Actor and Q value for critic respectively. Intermediate layers are used to build more complex features from input that will produce better results.
-- I have used [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) activation  and Dropout with 0.1 probability after each layer except the last one. For Actor, I have used tanh in the last layer to bound the actions between -1 and 1.
+- I have used [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) activation  and Dropout with 0.1 probability after each layer except the last one. For Actor, I have used tanh activation function in the last layer to bound the actions between -1 and 1.
 
 #### Other Hyperparameters
 
