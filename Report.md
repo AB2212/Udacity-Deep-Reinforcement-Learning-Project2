@@ -26,8 +26,7 @@ The task is episodic, and in order to solve the environment, the agent must get 
 I have implemented [Deep Deterministic Policy Gradient (DDPG)](https://arxiv.org/abs/1509.02971) in a parallel environment setting (20 agents)
 
 ![](ddpg_algo.PNG)
-
-source: [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971)
+image source: [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971)
 
 
 ### CODE
