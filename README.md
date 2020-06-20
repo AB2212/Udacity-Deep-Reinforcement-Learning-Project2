@@ -2,7 +2,7 @@
 
 This project repository contains the solution for Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) Continuous Control.
 
-![real%20world%20experience.gif](attachment:real%20world%20experience.gif)
+![real%20world%20experience.gif](real%20world%20experience.gif)
 
 ## Project Goal
 
