@@ -23,9 +23,10 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ### Learning Algorithm
 
-I have implemented [Deep Deterministic Policy Gradient (DDPG)](https://arxiv.org/abs/1509.02971) in a parallel environment setting (20 agents)
+I have implemented [Deep Deterministic Policy Gradient (DDPG)](https://arxiv.org/abs/1509.02971) in a parallel environment setting (20 agents). 
+DDPG is a model-free algorithm based on deterministic policy gradients that operate on continuous action spaces. It consists of Actor and Critic which learns from off-policy data. Similar to Deep Q Network (DQN), it also uses Replay Buffer and Target networks to stabilize the training. So 4 networks are used in total, 2 for actor and critic each. The actor function $\mu(s\|\theta^{\mu})$ maps the states into actions in a deterministic manner, and the critic $Q(s,a)$ takes states and actions as input and outputs Q values. 
 
-![](ddpg_algo.PNG)
+![](/images/ddpg_algo.PNG)
 image source: [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971)
 
 
