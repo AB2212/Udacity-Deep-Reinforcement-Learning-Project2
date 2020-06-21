@@ -6,7 +6,7 @@ Author: Abhijeet Biswas
 
 Train an agent to move its double-jointed arm to a goal location and keep it there.
 
-![](reacher.gif)
+![](/images/reacher.gif)
 
 ### Project details
 
@@ -59,9 +59,10 @@ The code is written in Python 3.6.3 and uses PyTorch 0.4.0. I have used detailed
 
 The environment got solved in 141 episodes by having average reward (32.16) more than 30 over 100 consecutive episodes. The below plot shows the reward received after each episode
 
-![reward_plot.png](reward_plot.png)
+![reward_plot.png](/images/reward_plot.png)
 
 ### Future Ideas
 
 1. Use prioritized replay buffer to replay important transitions more frequently, and therefore learn more efficiently.
-2. Use [Distributed Distributional Deterministic Policy Gradients](https://openreview.net/pdf?id=SyZipzbCb) and [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347) to compare performance against DDPG
+2. Use [Hindsight Experience Replay](https://arxiv.org/abs/1707.01495) for more sample efficient learning.
+2. Use [Distributed Distributional Deterministic Policy Gradients](https://openreview.net/pdf?id=SyZipzbCb), [Proximal Policy Optimization](https://arxiv.org/abs/1707.06347), [TD3](https://arxiv.org/abs/1802.09477), [SAC](https://arxiv.org/abs/1812.05905), [PlanNet](https://ai.googleblog.com/2019/02/introducing-planet-deep-planning.html) and [Dreamer](https://ai.googleblog.com/2020/03/introducing-dreamer-scalable.html) to compare performance against DDPG
