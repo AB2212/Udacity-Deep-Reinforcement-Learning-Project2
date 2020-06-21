@@ -2,13 +2,13 @@
 
 This project repository contains the solution for Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) Continuous Control.
 
-![real%20world%20experience.gif](real%20world%20experience.gif)
+![real%20world%20experience.gif](/images/real%20world%20experience.gif)
 
 ## Project Goal
 
 Train an agent to move its double-jointed arm to a goal location and keep it there.
 
-![](reacher.gif)
+![](/images/reacher.gif)
 
 
 ### Deep Reinforcement Learning Algorithm
