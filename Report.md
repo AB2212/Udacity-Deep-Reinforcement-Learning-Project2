@@ -24,8 +24,15 @@ The task is episodic, and in order to solve the environment, the agent must get 
 ### Learning Algorithm
 
 I have implemented [Deep Deterministic Policy Gradient (DDPG)](https://arxiv.org/abs/1509.02971) in a parallel environment setting (20 agents). 
-DDPG is a model-free algorithm based on deterministic policy gradients that operate on continuous action spaces. It consists of Actor and Critic which learns from off-policy data. Similar to Deep Q Network (DQN), it also uses Replay Buffer and Target networks to stabilize the training. So 4 networks are used in total, 2 for actor and critic each. The actor function $\mu(s\|\theta^{\mu})$ maps the states into actions in a deterministic manner, and the critic $Q(s,a)$ takes states and actions as input and outputs Q values. 
 
+DDPG is a model-free algorithm based on deterministic policy gradients that operate on high-dimensional continuous action spaces. It consists of Actor and Critic which learns from off-policy data. Similar to Deep Q Network (DQN), it also uses Replay Buffer and Target networks to stabilize the training. Total 4 networks are used, 2 (main and target) for actor and critic each. 
+
+The actor function $\mu(s|\theta^{\mu})$ maps the states into actions in a deterministic manner, and the critic $Q(s,a| \theta^{Q})$ takes states and actions as input and outputs Q values. The critic is updated using the Bellman equation as in Q-learning (shown in the image below).
+The actor takes in the state and outputs action, this state and action are fed to the critic. The actor is updated in such a way that the action of the actor maximizes the expected Q value output by the critic for that state. This is evaluated using the chain rule as shown in the actor update step in the image below.
+
+Ornstein-Uhlenbeck process is used to generate temporally correlated noise. This noise is added to the action output of the actor for exploration.
+
+Following is the complete algorithm:
 ![](/images/ddpg_algo.PNG)
 image source: [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT LEARNING](https://arxiv.org/abs/1509.02971)
 
@@ -54,7 +61,7 @@ The code is written in Python 3.6.3 and uses PyTorch 0.4.0. I have used detailed
 
 - NUM_UPDATES: Number of passes over the data at each update step, 10 was used
 
-
+- Ornstein-Uhlenbeck noise parameters: theta = 0.15, max_sigma = 0.2, min_sigma = 0.05
 
 ### Results
 
